@@ -1,5 +1,5 @@
-#(相对🐶)快速部署laravel
-###需要php artisan key:generate 更新.env中的App_Key
+# (相对🐶)快速部署laravel
+### 需要php artisan key:generate 更新.env中的App_Key
 - cors
 - 时区
 
