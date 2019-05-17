@@ -1,7 +1,12 @@
 # (相对🐶)快速部署laravel
-### 需要php artisan key:generate 更新.env中的App_Key
 - cors
 - 时区
+- token(涉及service,middleware,Kernel中注册中间件)
+
+
+### 需要php artisan key:generate 更新.env中的App_Key
+### 需要修改TokenService中的EXPIRE_Time,getUserByToken中的SELECT
+
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
