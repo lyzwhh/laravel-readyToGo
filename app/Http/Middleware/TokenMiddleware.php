@@ -39,7 +39,7 @@ class TokenMiddleware
             ]);
         else
         {
-            $userInfo = $this->tokenService->getUserByToken($request->header('token'));  //add id name nickname
+            $userInfo = $this->tokenService->getUserByToken($request->header('token'));  //add userInfo
             $request['user'] = $userInfo;
             return $next($request);
         }

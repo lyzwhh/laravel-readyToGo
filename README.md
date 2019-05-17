@@ -5,7 +5,7 @@
 
 
 ### 需要php artisan key:generate 更新.env中的App_Key
-### 需要修改TokenService中的EXPIRE_Time,getUserByToken中的SELECT
+### 需要修改TokenService中的EXPIRE_Time,getUserByToken中的SELECT. 看情况修改token的migration
 
 
 
