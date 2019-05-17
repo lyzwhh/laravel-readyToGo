@@ -1,6 +1,7 @@
 # (相对🐶)快速部署laravel
 - cors
 - 时区
+- 启动debug模式
 - token(涉及service,middleware,Kernel中注册中间件)
 
 
