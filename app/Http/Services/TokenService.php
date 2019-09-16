@@ -9,7 +9,7 @@ namespace App\Services;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class TokenService
+class TokenService      //todo redis化
 {
     public static $EXPIRE_TIME = 360000;    //修改
 

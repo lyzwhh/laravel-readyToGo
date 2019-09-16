@@ -2,7 +2,8 @@
 - cors
 - 时区
 - 启动debug模式
-- token(涉及service,middleware,Kernel中注册中间件)
+- token(涉及service,middleware,Kernel中注册中间件,token migration)
+- validatorHelper
 
 
 ### 需要php artisan key:generate 更新.env中的App_Key
