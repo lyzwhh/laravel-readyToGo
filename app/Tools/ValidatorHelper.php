@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Validator;
 class ValidatorHelper
 {
     /**
-     * 对一个数组进行表单验证 , 错误在validator->fails()中 , 需要主动判断 , 不会报错
+     * 对一个数组进行表单验证 , 错误在validator->errors()中 , 需要用$validator->fails()判断 , 不会报错
      * @param array $inputs
      * @param array $rules
      * @return mixed
