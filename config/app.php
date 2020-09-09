@@ -227,5 +227,14 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    //隐藏debug中多余的信息。
+    //'_ENV' => array_diff(
+    //        array_keys($_ENV),
+    //        explode(",", env('DEBUG_ENV_WHITELIST', "")) //以此来白名单
+    //    ),
+    'debug_blacklist' => [
+        '_COOKIE' => array_diff(array_keys($_COOKIE), array()),
+        '_SERVER' => array_diff(array_keys($_SERVER), array('APP_URL', 'QUERY_STRING')),
+        '_ENV' => array_diff(array_keys($_ENV), array()),
+    ],
 ];
