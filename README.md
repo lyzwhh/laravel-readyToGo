@@ -4,6 +4,7 @@
 - 启动debug模式
 - token(涉及service,middleware,Kernel中注册中间件,token migration)
 - validatorHelper
+- debug env 隐藏
 
 
 ### 需要php artisan key:generate 更新.env中的App_Key
