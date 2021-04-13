@@ -9,13 +9,13 @@ namespace App\Services;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 
-class TokenService      //todo redis化
+class TokenService
 {
-    public static $EXPIRE_TIME = 360000;    //修改
+    public static $EXPIRE_TIME = 360000;    //todo 修改
 
     public function createToken($userId)
     {
-        $tokenStr = md5(uniqid());
+        $tokenStr = $userId.md5(uniqid());  //拼接userId使其绝对不会相同
         $time = new Carbon();
         $outTime = new Carbon();
         $outTime->addHour(self::$EXPIRE_TIME);  //小时
@@ -35,7 +35,7 @@ class TokenService      //todo redis化
         $time = new Carbon();
         $outTime = new Carbon();
         $outTime->addHour(self::$EXPIRE_TIME);
-        $tokenStr = md5(uniqid());
+        $tokenStr = $userId.md5(uniqid());
         $data = [
             'token' => $tokenStr,
             'updated_at' => $time,
@@ -82,7 +82,7 @@ class TokenService      //todo redis化
     public function getUserByToken($tokenStr)
     {
         $tokenInfo = $this->getToken($tokenStr);
-        $userInfo=DB::table('users')->where('id',$tokenInfo->user_id)->select('id','name','nickname')->first();  //修改
+        $userInfo=DB::table('users')->where('id',$tokenInfo->user_id)->select('id','name','nickname')->first();  //todo 修改
         return $userInfo;
     }
 
